@@ -1,1 +1,1 @@
-Individual project
+individual class project
