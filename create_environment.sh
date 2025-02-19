@@ -7,8 +7,8 @@ read -p "Enter your name: " user_name
 APP_DIR="submission_reminder_${user_name}"
 
 # Define subdirectories and files
-SUBDIRS=("app/reminder" "modules" "assets" "config")
-FILES=("assets/submissions.txt" "config/config.env" "modules/functions.sh" "reminder.sh" "startup.sh")
+SUBDIRS=("app" "modules" "assets" "config")
+FILES=("assets/submissions.txt" "config/config.env" "modules/functions.sh" "app/reminder.sh" "startup.sh")
 FILE_CONTENTS=(
     "student, assignment, submission status
 Chinemerem, Shell Navigation, not submitted
