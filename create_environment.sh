@@ -69,10 +69,16 @@ for subdir in "${SUBDIRS[@]}"; do
     mkdir -p "$APP_DIR/$subdir"
 done
 
-# Create and populate the files
+# Create and populate the files, then make them executable if they are scripts
 index=0
 for file in "${FILES[@]}"; do
     echo "${FILE_CONTENTS[$index]}" > "$APP_DIR/$file"
+    
+    # Make the script files executable
+    if [[ "$file" == *.sh ]]; then
+        chmod u+x "$APP_DIR/$file"
+    fi
+
     ((index++))
 done
 
