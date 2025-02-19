@@ -75,8 +75,9 @@ for file in "${FILES[@]}"; do
     echo "${FILE_CONTENTS[$index]}" > "$APP_DIR/$file"
     
     # Make the script files executable
-    if [[ "$file" == *.sh ]]; then
+    if [[ "$file" == *.* ]]; then
         chmod u+x "$APP_DIR/$file"
+
     fi
 
     ((index++))
